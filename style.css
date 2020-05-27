@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+/*------------------*/
+/*-- Fonts --*/
+/*------------------*/
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('fonts/MuseoSansCyrl-700.eot');
+    src: url('fonts/MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+        url('fonts/MuseoSansCyrl-700.woff2') format('woff2'),
+        url('fonts/MuseoSansCyrl-700.woff') format('woff'),
+        url('fonts/MuseoSansCyrl-700.ttf') format('truetype'),
+        url('fonts/MuseoSansCyrl-700.svg#MuseoSansCyrl-700') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('fonts/MuseoSansCyrl-700Italic.eot');
+    src: url('fonts/MuseoSansCyrl-700Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/MuseoSansCyrl-700Italic.woff2') format('woff2'),
+        url('fonts/MuseoSansCyrl-700Italic.woff') format('woff'),
+        url('fonts/MuseoSansCyrl-700Italic.ttf') format('truetype'),
+        url('fonts/MuseoSansCyrl-700Italic.svg#MuseoSansCyrl-700Italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*-------------------------------------------*/
+/* BASIC SETUP */
+/*-------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #ffffff;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    min-height: 100%;
+    min-height: 100vh;
+}
+
+header {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}
+
+.content {
+    flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}
+
+/*-------------------------------------------*/
+/* ----- REUSABLE COMPONENTS ------ */
+/*-------------------------------------------*/
+
+.row {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.overflow_wrapp {
+    overflow: hidden;
+}
+
+.align_center {
+    text-align: center;
+}
+
+.align_right {
+    text-align: right;
+}
+
+.align_left {
+    text-align: left;
+}
+
+/*-------------------------------------------*/
+/* ----- HEADER ------ */
+/*-------------------------------------------*/
+
+
+
+/*-------------------------------------------*/
+/* ----- CONTENT ------ */
+/*-------------------------------------------*/
+
+
+.words {
+    background: #000;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.words_line_wrapp {
+    height: 60px;
+    position: relative;
+    margin: 16px 0;
+}
+
+.words_line {
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+}
+
+.direction_left {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-animation: direction1 20s linear infinite;
+    -moz-animation:    direction1 20s linear infinite;
+    -o-animation:      direction1 20s linear infinite;
+    animation:         direction1 20s linear infinite;
+}
+
+@keyframes direction1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(100% - 100vw), 0);
+    }
+}
+
+@-webkit-keyframes direction1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(100% - 100vw), 0);
+    }
+}
+
+@-moz-keyframes direction1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(100% - 100vw), 0);
+    }
+}
+
+.words_line p {
+    display: inline;
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 54px;
+    line-height: 54px;
+    color: #000;
+    text-stroke: 1px #fff;
+    text-fill-color: #000;
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: #000;
+}
+
+.words_line_2 {
+    white-space: nowrap;
+    position: relative;
+    left: 0;
+    -webkit-animation: direction2 20s linear infinite;
+    -moz-animation:    direction2 20s linear infinite;
+    -o-animation:      direction2 20s linear infinite;
+    animation:         direction2 20s linear infinite;
+}
+
+@keyframes direction2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(-100% + 100vw), 0);
+    }
+}
+
+@-webkit-keyframes direction2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(-100% + 100vw), 0);
+    }
+}
+
+@-moz-keyframes direction2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(-100% + 100vw), 0);
+    }
+}
+
+.words_line p.italic {
+    font-style: italic;
+}
+
+.words_line p.fill_white {
+    -webkit-text-fill-color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .words_line_wrapp {
+        height: 40px;
+        margin: 10px 0;
+    }
+
+    .words_line p {
+        font-size: 41px;
+        line-height: 43px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .words_line_wrapp {
+        height: 32px;
+    }
+
+    .words_line p {
+        font-size: 33px;
+        line-height: 34px;
+    }
+
+}
